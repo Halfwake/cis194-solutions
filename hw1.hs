@@ -26,3 +26,16 @@ sumDigits xs = sum $ map (sum . toDigits) xs
 validate:: Integer -> Bool
 validate n = (checksum `mod` 10) == 0
   where checksum = sumDigits $ doubleEveryOther $ toDigits n
+
+-- Hanoi Stuff
+-- After solving this exercise, playing this game dozens of times,
+-- and knowing the optimal strategy, I still have no intuition to
+-- how it works.
+-- Yeah, I get you put stuff on one and up reversing the order
+-- when you take it off, but my mind is blank.
+-- Lucky me the solution is in the queston.
+type Peg = String
+type Move = (Peg, Peg)
+hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
+hanoi 0 start goal scratch = []
+hanoi n start goal scratch = (hanoi (n - 1) start scratch goal) ++ [(start, goal)] ++ (hanoi (n - 1) scratch goal start)
