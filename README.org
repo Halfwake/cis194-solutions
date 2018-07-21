@@ -1,0 +1,5 @@
+* Solutions to Homework for CIS 194: Introduction to Haskell (Spring 2013) 
+
+My solutions to [[http://www.cis.upenn.edu/~cis194/spring13/][CIS 194]].
+
+I started this a while ago, but lost all my solutions, so now I'm putting them up here.
